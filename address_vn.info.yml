@@ -1,0 +1,8 @@
+name: Address VN
+type: module
+description: 'Provides functionality for handling postal addresses in Vietnam.'
+package: Field types
+core_version_requirement: ^8.8 || ^9
+config: entity.address_format.collection
+dependencies:
+  - drupal:field

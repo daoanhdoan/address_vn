@@ -1,0 +1,5 @@
+services:
+  address_vn.event_subscriber:
+    class: Drupal\address_vn\EventSubscriber\AddressVnEventSubscriber
+    tags:
+      - { name: event_subscriber }

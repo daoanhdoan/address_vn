@@ -1,0 +1,30 @@
+<?php
+/**
+ *
+ */
+
+use Drupal\address\Plugin\Field\FieldType\AddressFieldItemList;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\field\FieldConfigInterface;
+
+/**
+ * Implement @see hook_field_widget_form_alter()
+ * @param $element
+ * @param $form
+ * @param $context
+ */
+
+function address_vn_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  /** @var AddressFieldItemList $items */
+  $items = $context['items'];
+  /** @var FieldConfigInterface $field */
+  $field = $items->getFieldDefinition();
+  if ($field instanceof FieldConfigInterface && $field->getType() == "address" && in_array("VN", $element['address']['#available_countries'])) {
+    //$element['address']['#after_build'][] = 'address_vn_after_build';
+  }
+}
+function address_vn_after_build(array $element, FormStateInterface $form_state) {
+  //$element['country_code']['#attributes']['class'][] = 'visually-hidden';
+  //return $element;
+}
