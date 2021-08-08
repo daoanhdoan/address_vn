@@ -1,9 +1,12 @@
 {
-  "name": "daoanhdoan/address_vn",
-  "description": "Address VN - Provides functionality for handling postal addresses in Vietnam.",
-  "type": "drupal-custom-module",
-  "license":"GPL-2.0",
-  "extra": {
-    "installer-name": "address_vn"
-  }
+    "name" : "daoanhdoan/address_vn",
+    "description": "Address VN - Provides functionality for handling postal addresses in Vietnam.",
+    "type" : "drupal-custom-module",
+    "license": "GPL-2.0",
+    "extra": {
+        "installer-name": "address_vn"
+    },
+    "require": {
+        "drupal/field": "*"
+    }
 }
